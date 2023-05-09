@@ -117,4 +117,70 @@ if excercise == 25:
         print('the result is: ' + str(res_2))
 
 if excercise == 26:
-    
+    # signo zodiacal
+    day = int(input('Enter your day of birth: '))
+    mount = int(input('Enter your mount of birth: '))
+    if (mount==3 and day>=21) or (mount==4 and day<=20):
+        print('Aries')
+    elif (mount==4 and day>=21) or (mount==5 and day<=20):
+        print('Tauro')
+    elif (mount == 5 and day >= 21) or (mount == 6 and day <= 20):
+        print('Geminis')
+    elif (mount==6 and day>=21) or (mount==7 and day<=22):
+        print('Cancer')
+    elif (mount==7 and day>=23) or (mount==8 and day<=23):
+        print('Leo')
+    elif (mount==8 and day>=24) or (mount==9 and day<=22):
+        print('Virgo')
+    elif (mount==9 and day>=21) or (mount==10 and day<=20):
+        print('Libra')
+    elif (mount==10 and day>=24) or (mount==11 and day<=22):
+        print('Escorpio')
+    elif (mount==11 and day>=21) or (mount==12 and day<=22):
+        print('Sagitario')
+    elif (mount==12 and day>=22) or (mount==1 and day<=20):
+        print('Capricornio')
+    elif (mount==1 and day>=21) or (mount==2 and day<=19):
+        print('Acuario')
+    elif (mount==2 and day>=20) or (mount==3 and day<=20):
+        print('Piscis')
+    else:
+        print('this number is not available ')
+
+if excercise == 27:
+    #cuadrado o rectangulo
+    base = int(input('Enter the base of the quadrilateral: '))
+    height = int(input('enter the height of the quadrilateral: '))
+    area= base*height
+    perimeter = base + height + base +height
+    if base != height:
+        print('its a rectangle')
+    else:
+        print('its a square')
+    print('the area is: '+ str(area))
+    print('the perimeter is: '+ str(perimeter))
+
+if excercise == 28:
+    #descuentos en tienda
+    purchase=float(input('Enter the purchase price: '))
+    if purchase<100:
+        price_off=purchase*0.05
+        price_total=purchase-price_off
+        print('the total price is: $' + str(price_total))
+    elif purchase>200:
+        price_off = purchase * 0.15
+        price_total = purchase - price_off
+        print('the total price is: $' + str(price_total))
+    else:
+        price_off = purchase * 0.10
+        price_total = purchase - price_off
+        print('the total price is: $' + str(price_total))
+if excercise==29:
+    #saber si el año es bisiesto
+    year=int(input('Enter the year that you want see: '))
+    if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+        print('this year is a leap year')
+    else:
+        print('this year is not a leap year')
+else:
+    print('this exerciser is not available')
